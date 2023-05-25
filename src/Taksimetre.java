@@ -1,33 +1,23 @@
 
-not.java
+
 import java.util.Scanner;
-
-public class not {
+public class Taksimetre
+{
     public static void main(String[] args) {
-        int mat,ingilizce,kimya,fizik,tarih,resim;
-        Scanner tah = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
+        int km;
+        double perkm = 2.20, total = 10, min = 20;
+        System.out.print("Lütfen KM cinsinden giriniz");
+        km = input.nextInt();
+
+        total += (perkm * km);
+
+        total = total < 20 ? 20 : total;
+
+System.out.print(total);
 
 
-        System.out.print("Matematik notunuz : " );
-        mat = tah.nextInt();
-        System.out.print("ingilizce notunuz : " );
-        ingilizce = tah.nextInt();
-        System.out.print("kimya notunuz : " );
-        kimya = tah.nextInt();
-        System.out.print("fizik notunuz : " );
-        fizik = tah.nextInt();
-        System.out.print("tarih notunuz : " );
-        tarih = tah.nextInt();
-        System.out.print("resim notunuz : " );
-        resim = tah.nextInt();
-        int  sonuc  = mat+ ingilizce + kimya + fizik + tarih + resim;
-        int bit = sonuc / 6;            ;
-        System.out.print("Ortalamanız : " + bit);
-        int a = 59;
-        boolean tar = a >= bit;
-
-        String kalma=tar  ? "\n Kaldınız" : "\n Geçtiniz";
-        System.out.println(kalma);
 
 
-    }}
+    }
+}
